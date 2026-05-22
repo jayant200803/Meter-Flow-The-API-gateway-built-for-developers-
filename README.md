@@ -42,16 +42,23 @@ Any developer who exposes APIs to third parties and wants to meter, rate-limit, 
 
 ## Live Demo
 
+| | URL |
+|---|---|
+| **Frontend** | https://meter-flow-the-api-gateway-built-for-9d4h.onrender.com |
+| **Backend API** | https://meter-flow-the-api-gateway-built-for.onrender.com |
+| **Health Check** | https://meter-flow-the-api-gateway-built-for.onrender.com/health |
+
 ```
-URL:      http://localhost:3000
 Email:    demo@meterflow.dev
 Password: Demo123!
 ```
 
-After login, navigate to **API Keys**, generate a key, then test it via:
+> **Note:** Hosted on Render free tier — backend may take ~30s to wake up on first visit.
+
+After login, navigate to **API Keys**, generate a key, then test the gateway:
 
 ```bash
-curl -X GET http://localhost:5000/gateway/products \
+curl -X GET https://meter-flow-the-api-gateway-built-for.onrender.com/gateway/{apiId}/pokemon/pikachu \
   -H "X-API-Key: mf_live_YOUR_KEY_HERE"
 ```
 
